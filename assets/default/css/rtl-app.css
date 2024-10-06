@@ -657,7 +657,7 @@ body.rtl .dropdown-menu {
   }
 
   .rtl .mr-lg-25 {
-    margin-left: 25px !important;
+    margin-left: 0px !important;
     margin-right: initial !important;
   }
 
