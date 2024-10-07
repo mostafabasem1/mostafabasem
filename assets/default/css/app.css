@@ -14974,7 +14974,7 @@ p {
 @media (max-width: 991px) {
   .navbar {
     padding: 0 15px;
-    display: none;
+    /* display: none; */
   }
   .navbar .navbar-order {
     order: 2;
