@@ -12,7 +12,11 @@
     text-align: center;
 }   
   
-  
+  @media (max-width: 991px) {
+    .navbar {
+     display: none;
+    }
+  }
   
     
 .navbar-b {
