@@ -19411,7 +19411,7 @@ p {
   height: 40px;
   padding: 0;
   position: absolute;
-  right: 55px;
+  left: 55px;
   top: 0;
   transform: translate(0, -50%);
 }
