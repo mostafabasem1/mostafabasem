@@ -14922,8 +14922,8 @@ p {
   right: 0;
 }
 .rtl .navbar-auth-user-dropdown .custom-dropdown-body {
-  right: auto;
-  left: 0;
+  left: auto;
+  right: 0;
 }
 .navbar-auth-user-dropdown .navbar-auth-user-dropdown-item {
   transition: all 0.3s ease;
