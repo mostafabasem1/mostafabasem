@@ -2303,7 +2303,7 @@ a.badge-gray100:focus, a.badge-gray100.focus {
 .navbar .container-md,
 .navbar .container-lg,
 .navbar .container-xl {
-  display: flex;
+  display: contents;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
