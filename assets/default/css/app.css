@@ -15047,8 +15047,9 @@ p {
 }
 @media (min-width: 991px) {
   .menu-category > ul > li {
-    background-color: #f1f1f1;
-    padding: 12px 25px 12px 15px;
+        padding: 12px 25px 12px 15px;
+        background-image: linear-gradient(135deg, var(--primary) 10%, var(--secondary) 100%);
+        color: white;
   }
 }
 @media (max-width: 991px) {
