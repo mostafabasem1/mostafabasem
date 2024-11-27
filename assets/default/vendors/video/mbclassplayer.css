@@ -815,7 +815,8 @@
 }
 
 .video-js .vjs-play-progress {
-  background: #f00;
+  background: rgb(255,0,0);
+  background: linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(255,38,142,1) 100%);
 }
 
 .video-js .vjs-load-progress {
