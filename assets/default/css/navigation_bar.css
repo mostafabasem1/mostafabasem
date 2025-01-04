@@ -14,7 +14,7 @@
   
   @media (max-width: 991px) {
     .navbar {
-     display: none;
+     /* display: none; */
     }
   }
   
