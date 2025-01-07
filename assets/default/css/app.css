@@ -4,6 +4,20 @@ $custom-control-indicator-checked-border-color: $gray-300;
 $custom-control-indicator-checked-bg: #ffffff;
 $custom-control-indicator-bg:$primary;*/
 
+ @media (min-width: 991px) {
+    .top-navbar {
+        opacity: 0;
+    }
+    }
+
+ .rtl .navbar-auth-user-dropdown .custom-dropdown-body {
+        right: 0;
+    }
+    
+    .rtl .ml-50 {
+        right: -50px;
+    }
+
 .btn-text-primary {
   color: #43d477 !important;
 }
