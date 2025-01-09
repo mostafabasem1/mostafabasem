@@ -15754,7 +15754,7 @@ p {
 .feature-slider .feature-slider-body {
   border-radius: 15px;
   box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
-  background-color: #ffffff;
+  background-color: #F8FAFD;
   padding: 10px;
   z-index: 5;
 }
@@ -16633,7 +16633,7 @@ p {
 .rtl .webinar-card .webinar-card-body {
     margin: -50px 10px 0px 10px;
     position: relative;
-    background: #F7F8FF;
+    background: #F8FAFD;
     box-shadow: 0 5px 12px 0 rgba(0, 0, 0, 0.1);
     border-radius: 15px;
     transition: all 0.5s ease;
@@ -18230,7 +18230,7 @@ p {
   position: relative;
   border-radius: 15px;
   box-shadow: 0 5px 12px 0 rgba(0, 0, 0, 0.1);
-  background-color: #ffffff;
+  background-color: #F8FAFD;
   border: 1px solid #ececec;
   transition: all 0.5s ease;
 }
