@@ -16637,6 +16637,7 @@ p {
     box-shadow: 0 5px 12px 0 rgba(0, 0, 0, 0.1);
     border-radius: 15px;
     transition: all 0.5s ease;
+    font-weight: bold;
 }
 .webinar-card .webinar-card-body .webinar-price-box .real {
   font-size: 20px;
