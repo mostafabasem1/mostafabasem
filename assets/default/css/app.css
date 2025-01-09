@@ -14956,7 +14956,7 @@ p {
 }
 
 .navbar {
-  background-color: #ffffff;
+  background-color: #F7FAFD;
   z-index: 491;
   box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.03);
   transition: bottom 0.4s cubic-bezier(0.43, 0.83, 0.54, 1.02);
