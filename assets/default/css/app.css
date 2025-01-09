@@ -16633,7 +16633,7 @@ p {
 .rtl .webinar-card .webinar-card-body {
     margin: -50px 10px 0px 10px;
     position: relative;
-    background: #fff;
+    background: #F7F8FF;
     box-shadow: 0 5px 12px 0 rgba(0, 0, 0, 0.1);
     border-radius: 15px;
     transition: all 0.5s ease;
