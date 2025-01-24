@@ -32,6 +32,7 @@
     box-shadow: 0 0 30px 0 rgba(0, 0, 0, .3);
     z-index:200;
     transition: transform 0.3s;
+    text-align: center;
 }
 
 .scroll-down .navbar-b {
