@@ -18745,7 +18745,7 @@ p {
 }
 
 .topics-title-section {
-  background-image: url("/assets/default/img/forum/topics_title_bg.png");
+  background-image: url("https://cdn.jsdelivr.net/gh/mostafabasem1/mostafabasem/assets/default/img/forum/topics_title_bg.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
