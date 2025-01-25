@@ -14317,7 +14317,7 @@ p {
 }
 
 .panel-content {
-  padding: 30px 15px;
+  padding: 0px 15px;
   width: calc(100% - 254px);
 }
 @media (max-width: 991px) {
