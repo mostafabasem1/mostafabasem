@@ -14728,7 +14728,7 @@ p {
 }
 
 .top-navbar {
-  height: 53px;
+  height: 0;
 }
 @media (max-width: 991px) {
   .top-navbar {
