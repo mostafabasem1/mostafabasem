@@ -14317,12 +14317,12 @@ p {
 }
 
 .panel-content {
-  padding: 0px 15px;
+  padding: 40px 15px;
   width: calc(100% - 254px);
 }
 @media (max-width: 991px) {
   .panel-content {
-    padding: 90px 15px 30px;
+    padding: 40px 15px 30px;
     width: 100%;
   }
 }
