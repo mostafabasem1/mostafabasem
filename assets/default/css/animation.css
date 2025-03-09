@@ -1,0 +1,200 @@
+.slider-container{
+                    padding: 250px 0 350px;
+                    position: relative;
+                    overflow: hidden;
+                }
+                
+                /* أشكال زخرفية */
+                .slider-container::before,
+                .slider-container::after {
+                    content: '';
+                    position: absolute;
+                    width: 300px;
+                    height: 300px;
+                    background: rgba(255, 255, 255, 0.1);
+                    border-radius: 50%;
+                    z-index: 0;
+                }
+                
+                .slider-container::before {
+                    top: -150px;
+                    left: -150px;
+                    animation: float 15s infinite ease-in-out;
+                }
+                
+                .slider-container::after {
+                    bottom: -150px;
+                    right: -150px;
+                    animation: float 20s infinite ease-in-out reverse;
+                }
+                
+                @keyframes float {
+                    0% { transform: translate(0, 0) rotate(0deg); }
+                    50% { transform: translate(30px, 30px) rotate(10deg); }
+                    100% { transform: translate(0, 0) rotate(0deg); }
+                }
+                
+                @media only screen and (max-width: 600px) {
+                    .slider-container{
+                        padding: 250px 0 10px;
+                    }
+                }
+                
+                .slider-container .slider-content h1{
+                    color:#020e4a;
+                }
+                
+                .slider-container .slider-content .slide-hint{
+                    color:#000000;
+                }
+                
+                /* تأثيرات التحويم */
+                .btn-primary:hover, .btn-secondary:hover {
+                    transform: translateY(-5px);
+                    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+                    transition: all 0.3s ease;
+                }
+.user-select-none{
+                    display: none;
+                }
+                
+                .background-wrap {
+                    position: relative;
+                    overflow: hidden;
+                }
+                
+                /* أشكال هندسية متحركة */
+                .shape {
+                    position: absolute;
+                    opacity: 0.2;
+                    z-index: 0;
+                }
+                
+                .shape-1 {
+                    top: 20%;
+                    left: 10%;
+                    width: 80px;
+                    height: 80px;
+                    background: linear-gradient(45deg, #6e45e2, #88d3ce);
+                    border-radius: 50%;
+                    animation: pulse 4s infinite;
+                }
+                
+                .shape-2 {
+                    top: 60%;
+                    right: 10%;
+                    width: 120px;
+                    height: 120px;
+                    background: linear-gradient(45deg, #f6d365, #fda085);
+                    clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+                    animation: spin 15s infinite linear;
+                }
+                
+                @keyframes pulse {
+                    0% { transform: scale(1); }
+                    50% { transform: scale(1.2); }
+                    100% { transform: scale(1); }
+                }
+                
+                @keyframes spin {
+                    0% { transform: rotate(0deg); }
+                    100% { transform: rotate(360deg); }
+                }
+/* استيراد Animate.css */
+    @import url('https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css');
+    
+    /* تأثير نبض للأزرار */
+    .pulse-effect {
+        animation: pulse 2s infinite;
+    }
+    
+    @keyframes pulse {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.05); }
+        100% { transform: scale(1); }
+    }
+    
+    /* تأثير طفو للصور والرسوم المتحركة */
+    .floating-element {
+        animation: floating 4s ease-in-out infinite;
+    }
+    
+    @keyframes floating {
+        0% { transform: translateY(0px); }
+        50% { transform: translateY(-15px); }
+        100% { transform: translateY(0px); }
+    }
+    
+    /* تأثير الظل عند التحويم على الأزرار */
+    .btn-hover-effect {
+        transition: all 0.3s ease;
+    }
+    
+    .btn-hover-effect:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    }
+    
+    /* تأثير حاوية الصورة */
+    .image-container {
+        position: relative;
+        overflow: hidden;
+        border-radius: 15px;
+        transition: transform 0.5s ease;
+    }
+    
+    .image-container:hover {
+        transform: scale(1.02);
+    }
+    
+    
+    /* تأثير البحث */
+    .search-box {
+        transition: all 0.3s ease;
+    }
+    
+    .search-box:focus-within {
+        transform: scale(1.02);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2) !important;
+    }
+    
+    /* جزيئات الخلفية المتحركة */
+    .particles {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        z-index: 0;
+    }
+    
+    .particle {
+        position: absolute;
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.5);
+        pointer-events: none;
+    }
+    
+    
+        
+        @keyframes particleAnimation#{$i} {
+            0% {
+                transform: translate(0, 0);
+            }
+            25% {
+                transform: translate(#{random(100) - 50}px, #{random(100) - 50}px);
+            }
+            50% {
+                transform: translate(#{random(100) - 50}px, #{random(100) - 50}px);
+            }
+            75% {
+                transform: translate(#{random(100) - 50}px, #{random(100) - 50}px);
+            }
+            100% {
+                transform: translate(0, 0);
+            }
+        }
+    }
