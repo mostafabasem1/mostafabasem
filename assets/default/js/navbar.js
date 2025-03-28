@@ -1,25 +1,18 @@
-const body = document.body;
-const scrollUp = "scroll-up";
-const scrollDown = "scroll-down";
-let lastScroll = 0;
-window.addEventListener("scroll", () => {
-  const currentScroll = window.pageYOffset;
-  if (currentScroll <= 0) {
-    body.classList.remove(scrollUp);
-    return;
-  }
-  if (currentScroll > lastScroll && !body.classList.contains(scrollDown)) {
-    // down 
-    body.classList.remove(scrollUp);
-    body.classList.add(scrollDown);
-  } else if (
-    currentScroll < lastScroll &&
-    body.classList.contains(scrollDown)
-  ) {
-    // up 
-    body.classList.remove(scrollDown);
-    body.classList.add(scrollUp);
-  }
-  lastScroll = currentScroll;
-});
-   
+ document.addEventListener("DOMContentLoaded", function () {
+        let lastScrollTop = 0;
+        const navbar = document.querySelector('.navbar-b');
+
+        window.addEventListener('scroll', function () {
+            const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+            if (currentScroll > lastScrollTop && currentScroll > 100) {
+                // التمرير للأسفل: إخفاء القائمة
+                navbar.classList.add('hidden');
+            } else {
+                // التمرير للأعلى: إظهار القائمة
+                navbar.classList.remove('hidden');
+            }
+
+            lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // تفادي القيم السالبة
+        });
+    });
