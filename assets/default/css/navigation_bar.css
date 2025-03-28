@@ -1,23 +1,7 @@
-
-    
-    body.rtl {
-        padding-bottom: 86px;
+.panel-content {
+        padding-bottom: 100px;
     }
-    
-   
-    
-.text{
-    text-align: center;
-}   
-  
-  @media (max-width: 991px) {
-    .navbar {
-     /* display: none; */
-    }
-  }
-  
-    
-.navbar-b {
+    .navbar-b {
     position: fixed;
     bottom: 0;
     display: flex;
@@ -25,19 +9,21 @@
     justify-content: space-evenly;
     width: 100%;
     padding: 10px 0;
-    background: #fff;
+    background: rgba(255, 255, 255, 0.3); /* خلفية شفافة قليلاً */
+    backdrop-filter: blur(15px); /* تأثير زجاجي */
+    -webkit-backdrop-filter: blur(15px); /* دعم لمتصفحات WebKit */
     border-radius: 30px 30px 0 0;
-    box-shadow: 0 0 30px 0 rgba(0, 0, 0, .3);
-    z-index:200;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* ظل خفيف لتعزيز التصميم */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* حد خفيف لتعزيز التأثير الزجاجي */
+    z-index: 200;
     transition: transform 0.3s;
     text-align: center;
+   transition: transform 0.3s ease-in-out; /* انتقال سلس عند التمرير */
+    will-change: transform; /* تحسين الأداء */
 }
 
-.scroll-down .navbar-b {
-  transform: translate3d(0, 100%, 0);
-}
-.scroll-up .navbar-b {
-  transform: none;
+.hidden {
+    transform: translateY(100%);
 }
 
 .navbar-b button {
@@ -46,36 +32,24 @@
     height: 40px;
     border-radius: 20px;
     background: transparent;
-    transition: all .25s ease;
-    color:var(--secondary);
-    border:transparent;
-}
-
-.navbar-b button:active:not(.plus) {
-    transform: scale(1);
-}
-
-.navbar-b button.active {
-    color: #e84c4f;
-}
-
-.navbar-b button i {
-    font-size: 1.3rem;
-    pointer-events: none;
+    transition: all 0.25s ease;
+    color: var(--secondary);
+    border: transparent;
 }
 
 .navbar-b button.plus {
-    height: 50px;
+    height: 55px;
+    width: 55px;
     color: #fff;
     background: var(--primary);
-    border-radius: 20px;
-    margin-top: -50px;
-    margin-bottom: 13px;
-    box-shadow: 0 10px 20px 0 #e84c4f66;
+    border-radius: 50%; /* جعله دائري لتمييزه */
+    margin-top: -30px; /* رفع الزر لأعلى */
+    box-shadow: 0 10px 25px rgba(232, 76, 79, 0.4);
+    border: 3px solid rgba(255, 255, 255, 0.3); /* حد لتعزيز التأثير الزجاجي */
 }
 
 .navbar-b button.plus:hover {
-    transform: translateY(-4px);
+    transform: translateY(-4px); /* تأثير ارتفاع طفيف عند المرور */
 }
 
 .navbar-b .effect {
@@ -83,21 +57,57 @@
     width: 60px;
     height: 50px;
     border-radius: 18px;
-    background: #e84c4f26;
+    background: rgba(232, 76, 79, 0.2);
     opacity: 0;
 }
 
-
+/* تأثير الشفافية والوضوح مع الأجهزة الصغيرة */
 @media screen and (max-width: 320px) {
   .navbar-b button {
-    cursor: pointer;
     width: 40px;
     height: 35px;
-    border-radius: 20px;
-    background: transparent;
-    transition: all .25s ease;
-    color:var(--secondary);
   }
 }
 
+.navbar-b button {
+    cursor: pointer;
+    width: 50px;
+    height: 40px;
+    border-radius: 20px;
+    background: transparent;
+    transition: all 0.3s ease, transform 0.2s ease;
+    color: var(--secondary);
+    border: transparent;
+    position: relative;
+    overflow: hidden;
+}
 
+.navbar-b button::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200%;
+    height: 200%;
+    background: rgba(255, 255, 255, 0.15); /* تأثير وميض عند الضغط */
+    transition: width 0.4s ease, height 0.4s ease, top 0.4s ease, left 0.4s ease;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    z-index: 0;
+}
+
+.navbar-b button:hover::before {
+    width: 0;
+    height: 0;
+    opacity: 1;
+}
+
+.navbar-b button:hover {
+    transform: scale(1.1); /* تكبير طفيف عند التمرير */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15); /* ظل عند التمرير */
+}
+
+.navbar-b button:active {
+    transform: scale(0.9); /* تصغير بسيط عند النقر */
+}
