@@ -6956,6 +6956,7 @@ button.bg-gray100:focus {
 
 .rounded-sm {
   border-radius: 0.625rem !important;
+  background-color: #FFFFFF;
 }
 
 .rounded {
@@ -7936,6 +7937,7 @@ button.bg-gray100:focus {
 
 .shadow-lg {
   box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.05) !important;
+  background-color: #FFFFFF;
 }
 
 .shadow-none {
