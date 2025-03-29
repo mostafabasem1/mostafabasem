@@ -15762,6 +15762,10 @@ p {
   background-color: #ffffff;
   padding: 10px;
   z-index: 5;
+  background: rgba(255, 255, 255, 0.1); /* لون شفاف */
+  backdrop-filter: blur(10px); /* تأثير التمويه */
+  -webkit-backdrop-filter: blur(10px); /* دعم لمتصفحات Webkit */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* ظل خفيف */
 }
 .feature-slider .feature-slider-body .card-title {
   font-size: 16px;
@@ -16138,6 +16142,10 @@ p {
   .home-video-container .home-video-play-button {
     width: 75px;
     height: 75px;
+	background: rgba(255, 255, 255, 0.1); /* لون شفاف */
+    backdrop-filter: blur(10px); /* تأثير التمويه */
+    -webkit-backdrop-filter: blur(10px); /* دعم لمتصفحات Webkit */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* ظل خفيف */
   }
   .home-video-container .home-video-play-button .feather-play {
     width: 25px;
@@ -19858,17 +19866,4 @@ p {
     }
 }
 
-  .feature-slider .feature-slider-body {
-              background: rgba(255, 255, 255, 0.1); /* لون شفاف */
-                 backdrop-filter: blur(10px); /* تأثير التمويه */
-                -webkit-backdrop-filter: blur(10px); /* دعم لمتصفحات Webkit */
-                 box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* ظل خفيف */
-    
-            }
-            
-            .home-video-container .home-video-play-button {
-                 background: rgba(255, 255, 255, 0.1); /* لون شفاف */
-                 backdrop-filter: blur(10px); /* تأثير التمويه */
-                -webkit-backdrop-filter: blur(10px); /* دعم لمتصفحات Webkit */
-                 box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* ظل خفيف */
-            }
+  
