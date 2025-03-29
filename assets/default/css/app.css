@@ -13253,6 +13253,7 @@ body.modal-open, body.swal2-shown {
 body {
   font-family: var(--font-family-base) !important;
   overflow: hidden;
+  background-color: #F8F9FA;
 }
 @media (max-width: 767px) {
   body {
@@ -15386,7 +15387,7 @@ p {
 }
 
 .shadow-effect {
-  background: #F7FAFD;
+  background: #ffffff;
   padding: 20px;
   border-radius: 10px;
   text-align: center;
@@ -15442,7 +15443,7 @@ p {
 }
 .customers-testimonials.owl-carousel .owl-dots .owl-dot span {
   border-radius: 50px;
-  background: #ffffff;
+  background: #F8F9FA;
   border: solid 1px #d4d4d4;
   display: inline-block;
   height: 20px;
@@ -15696,7 +15697,7 @@ p {
   height: 20px;
   margin-right: 20px;
   padding: 4px;
-  background: #ffffff !important;
+  background: #F8F9FA;
   border: solid 1px #d4d4d4;
   opacity: 1 !important;
 }
@@ -15755,7 +15756,7 @@ p {
 .feature-slider .feature-slider-body {
   border-radius: 15px;
   box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
-  background-color: #F8FAFD;
+  background-color: #ffffff;
   padding: 10px;
   z-index: 5;
 }
@@ -16634,7 +16635,7 @@ p {
 .rtl .webinar-card .webinar-card-body {
     margin: -50px 10px 0px 10px;
     position: relative;
-    background: #F8FAFD;
+    background: #ffffff;
     box-shadow: 0 5px 12px 0 rgba(0, 0, 0, 0.1);
     border-radius: 15px;
     transition: all 0.5s ease;
