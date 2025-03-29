@@ -6985,6 +6985,7 @@ button.bg-gray100:focus {
 
 .rounded-lg {
   border-radius: 0.9375rem !important;
+  background-color: #FFFFFF;
 }
 
 .rounded-circle {
@@ -19856,3 +19857,18 @@ p {
         opacity: 0.0;
     }
 }
+
+  .feature-slider .feature-slider-body {
+              background: rgba(255, 255, 255, 0.1); /* لون شفاف */
+                 backdrop-filter: blur(10px); /* تأثير التمويه */
+                -webkit-backdrop-filter: blur(10px); /* دعم لمتصفحات Webkit */
+                 box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* ظل خفيف */
+    
+            }
+            
+            .home-video-container .home-video-play-button {
+                 background: rgba(255, 255, 255, 0.1); /* لون شفاف */
+                 backdrop-filter: blur(10px); /* تأثير التمويه */
+                -webkit-backdrop-filter: blur(10px); /* دعم لمتصفحات Webkit */
+                 box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* ظل خفيف */
+            }
