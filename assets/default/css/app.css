@@ -15775,7 +15775,7 @@ p {
 }
 @media (max-width: 991px) {
   .feature-slider .feature-slider-body .card-title {
-    font-size: 16px;
+    font-size: 20px;
   }
 }
 .feature-slider .feature-desc {
@@ -15794,7 +15794,7 @@ p {
 }
 
 .vertical-line {
-  border-left: solid 2px #ececec;
+  border-left: solid 2px #6c6964;
 }
 
 .stars-card {
@@ -15826,7 +15826,7 @@ p {
 .user-inline-avatar .user-name {
   font-weight: 500;
   line-height: 1.19;
-  color: #000000;
+  color: #696765;
 }
 
 .home-sections {
