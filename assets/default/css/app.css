@@ -15762,7 +15762,7 @@ p {
   background-color: #ffffff;
   padding: 10px;
   z-index: 5;
-  background: rgba(255, 255, 255, 0.1); /* لون شفاف */
+  background: rgb(255 255 255 / 65%); /* لون شفاف */
   backdrop-filter: blur(10px); /* تأثير التمويه */
   -webkit-backdrop-filter: blur(10px); /* دعم لمتصفحات Webkit */
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* ظل خفيف */
@@ -15771,7 +15771,7 @@ p {
   font-size: 16px;
   font-weight: bold;
   line-height: 1.2;
-  color: #171347;
+  color: #38355f;
 }
 @media (max-width: 991px) {
   .feature-slider .feature-slider-body .card-title {
@@ -16121,6 +16121,10 @@ p {
   border-radius: 50%;
   cursor: pointer;
   z-index: 22;
+  background: rgb(255 255 255 / 20%);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: ;
 }
 .home-video-container .home-video-play-button:after, .home-video-container .home-video-play-button:before {
   content: "";
@@ -16651,6 +16655,10 @@ p {
     border-radius: 15px;
     transition: all 0.5s ease;
     font-weight: bold;
+    background: rgb(255 255 255 / 65%);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: ;
 }
 .webinar-card .webinar-card-body .webinar-price-box .real {
   font-size: 20px;
