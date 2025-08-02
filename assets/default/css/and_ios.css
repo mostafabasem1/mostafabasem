@@ -1207,7 +1207,7 @@
     display: flex;
     align-items: center;
     justify-content: space-around; /* Distributes space evenly */
-    z-index: 1;
+    z-index: 2;
     padding: 0 5px; /* Reduced horizontal padding to create more space */
 }
 
