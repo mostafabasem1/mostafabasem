@@ -209,7 +209,7 @@ body {
 }
 
 .learning-page .learning-content .learning-content-video-player .video-js {
-    height: 100%!important
+    height: 100%!important;
 }
 
 .learning-page .learning-content .learning-content-video-player .vimeoFrame {
@@ -241,11 +241,11 @@ body {
 
 @media (max-width: 991px) {
     .learning-page .learning-content {
-         height: 65vh
+         height: 50vh;
     }
 
     .learning-page .learning-content .learning-content-video-player {
-        height: 65vh
+        height: 50vh;
     }
 }
 
