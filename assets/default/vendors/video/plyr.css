@@ -1434,7 +1434,7 @@ a.plyr__control {
   display: block;
   width: 20px;  /* اضبط العرض حسب حجم أيقونتك */
   height: 20px; /* اضبط الارتفاع حسب حجم أيقونتك */
-  background-image: url('/assets/default/img/rewind.png'); /* <-- ضع مسار أيقونتك هنا */
+  background-image: url('https://cdn.jsdelivr.net/gh/mostafabasem1/mostafabasem/assets/default/img/rewind.png'); /* <-- ضع مسار أيقونتك هنا */
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -1451,7 +1451,7 @@ a.plyr__control {
   display: block;
   width: 20px;
   height: 20px;
-  background-image: url('/assets/default/img/fast-forward.png'); /* <-- ضع مسار أيقونتك هنا */
+  background-image: url('https://cdn.jsdelivr.net/gh/mostafabasem1/mostafabasem/assets/default/img/fast-forward.png'); /* <-- ضع مسار أيقونتك هنا */
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
