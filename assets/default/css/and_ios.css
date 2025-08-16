@@ -631,7 +631,7 @@
 
     body {
         padding-top: var(--navbar-height);
-        
+        /* margin-top: 50px; */
     }
 
     .app-navbar {
@@ -1207,7 +1207,7 @@
     display: flex;
     align-items: center;
     justify-content: space-around; /* Distributes space evenly */
-    z-index: 2;
+    z-index: 1;
     padding: 0 5px; /* Reduced horizontal padding to create more space */
 }
 
