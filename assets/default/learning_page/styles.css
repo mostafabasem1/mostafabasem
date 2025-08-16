@@ -181,97 +181,108 @@ body {
     display: none
 }
 
+/* -- إعدادات أساسية للمحتوى التعليمي -- */
 .learning-page .learning-content {
     width: 100%;
-    height: calc(100vh - 90px);
+    /* استخدام min-height لضمان أن العنصر يملأ الشاشة على الأقل، ولكنه ينمو إذا لزم الأمر */
+    height: calc(100vh - 100px); /* مثال: 100vh مطروحًا منه ارتفاع الشريط العلوي مثلاً */
     background-color: #fff;
     border-radius: 10px;
-    overflow-y: auto
+    /* overflow-y: auto; لم تعد ضرورية إلا إذا كان هناك max-height */
+    display: flex;
+    flex-direction: column;
 }
 
 .learning-page .learning-content .learning-content-loading img {
     width: 80px;
-    height: 80px
+    height: 80px;
 }
 
 .learning-page .learning-content .learning-content-box {
-    border: 1px dashed #ececec
+    border: 1px dashed #ececec;
+    width: 100%; /* اجعله يأخذ العرض الكامل للمساحة المتاحة */
+    /* استخدم max-width للتحكم في العرض على الشاشات الكبيرة بدلاً من min-width */
+    max-width: 800px; /* يمكنك تعديل هذه القيمة حسب التصميم */
+    margin: 0 auto; /* للتوسيط الأفقي */
 }
 
-@media (min-width: 991px) {
-    .learning-page .learning-content .learning-content-box {
-        min-width:500px
+
+/* -- الجزء الأهم: جعل مشغل الفيديو متجاوبًا -- */
+.learning-page .learning-content .learning-content-video-player {
+    width: 100%;
+    /* الطريقة الحديثة للحفاظ على نسبة العرض إلى الارتفاع 16:9 */
+    aspect-ratio: 16 / 9;
+    
+    position: relative;
+    background-color: #000; /* خلفية سوداء تظهر أثناء تحميل الفيديو */
+}
+
+/* حل بديل للمتصفحات القديمة التي لا تدعم aspect-ratio */
+@supports not (aspect-ratio: 16 / 9) {
+    .learning-page .learning-content .learning-content-video-player {
+        height: 0;
+        padding-bottom: 56.25%; /* هذه النسبة تعادل 16:9 */
     }
 }
 
-.learning-page .learning-content .learning-content-video-player {
-    height: calc(100vh - 100px)
-}
-
-.learning-page .learning-content .learning-content-video-player .video-js {
-    height: 100%!important;
-}
-
-.learning-page .learning-content .learning-content-video-player .vimeoFrame {
-    height: 100%!important;
-    padding-bottom: 0!important
+/* جعل الفيديو أو الـ iframe يملأ الحاوية الجديدة */
+.learning-page .learning-content .learning-content-video-player .video-js,
+.learning-page .learning-content .learning-content-video-player .vimeoFrame,
+.learning-page .learning-content .learning-content-video-player iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+    padding-bottom: 0 !important; /* إلغاء أي مساحات إضافية */
 }
 
 .learning-page .learning-content .learning-content-video-player .vimeoFrame .vimeoplayer {
-    position: static!important;
-    height: 100%!important
+    position: static !important; /* هذا السطر قد لا يكون ضروريًا الآن */
 }
 
-.learning-page .learning-content .text-lesson-content p,.learning-page .learning-content .text-lesson-content span {
-    color: #818894!important;
-    margin-top: 15px!important
+
+/* -- إعدادات نصوص الدروس -- */
+.learning-page .learning-content .text-lesson-content p,
+.learning-page .learning-content .text-lesson-content span {
+    color: #818894 !important;
+    margin-top: 15px !important;
 }
 
 .learning-page .learning-content .text-lesson-content img {
-    border-radius: 15px!important;
-    max-width: 100%!important
+    border-radius: 15px !important;
+    max-width: 100% !important;
+    height: auto; /* مهم للحفاظ على نسبة أبعاد الصور */
 }
 
-.learning-page .learning-content .text-lesson-content h1,.learning-page .learning-content .text-lesson-content h2,.learning-page .learning-content .text-lesson-content h3 {
-    font-size: 20px!important;
-    font-weight: 700!important;
-    color: #171347!important;
-    margin-top: 25px!important
+.learning-page .learning-content .text-lesson-content h1,
+.learning-page .learning-content .text-lesson-content h2,
+.learning-page .learning-content .text-lesson-content h3 {
+    font-size: 20px !important;
+    font-weight: 700 !important;
+    color: #171347 !important;
+    margin-top: 25px !important;
 }
 
-@media (max-width: 991px) {
-    .learning-page .learning-content {
-         height: 50vh;
-    }
+/* تم حذف media queries القديمة لأن التصميم أصبح مرنًا ولا يحتاج إليها */
 
-    .learning-page .learning-content .learning-content-video-player {
-        height: 50vh;
-    }
-}
 
-@media (orientation: landscape) {
-    .learning-page .learning-content {
-       height: 80vh
-    }
-
-    .learning-page .learning-content .learning-content-video-player {
-        height: 80vh
-    }
-}
-
+/* -- إعدادات الـ iframe العام -- */
 .learning-page .learning-content-iframe {
     width: 100%;
-    height: 100%;
-    border-radius: 10px
+    /* اجعل الـ iframe ينمو ليملأ المساحة المتاحة في الحاوية المرنة */
+    flex-grow: 1;
+    border-radius: 10px;
 }
 
-.learning-page .learning-content-iframe .h_iframe-aparat_embed_frame,.learning-page .learning-content-iframe iframe {
+.learning-page .learning-content-iframe .h_iframe-aparat_embed_frame,
+.learning-page .learning-content-iframe iframe {
     width: 100%;
-    height: 100%
+    height: 100%;
 }
 
-.learning-page .learning-content-iframe .h_iframe-aparat_embed_frame>span {
-    display: none!important
+.learning-page .learning-content-iframe .h_iframe-aparat_embed_frame > span {
+    display: none !important;
 }
 
 .learning-page-assignment-history-status-icon {
