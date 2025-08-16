@@ -1776,17 +1776,16 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            width: 64px;
-            height: 64px;
-            background-color: rgba(var(--primary-color-rgb), 0.7);
+            box-shadow: 0 20px 12px 0 rgba(0, 0, 0, 0.1);
+            background-color: #ffffff;
+            width: 96px;
+            height: 96px;
             border-radius: 50%;
-            color: white;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-            transition: all 0.3s ease;
+            z-index: 2;
         }
         .course-video-icon:hover {
             transform: translate(-50%, -50%) scale(1.1);
-            background-color: rgba(var(--primary-color-rgb), 1);
+            background-color: var(--primary);
         }
         .course-video-icon i {
             width: 32px;
