@@ -185,7 +185,7 @@ body {
 .learning-page .learning-content {
     width: 100%;
     /* استخدام min-height لضمان أن العنصر يملأ الشاشة على الأقل، ولكنه ينمو إذا لزم الأمر */
-    height: calc(100vh - 100px); /* مثال: 100vh مطروحًا منه ارتفاع الشريط العلوي مثلاً */
+    height: auto;
     background-color: #fff;
     border-radius: 10px;
     /* overflow-y: auto; لم تعد ضرورية إلا إذا كان هناك max-height */
@@ -270,7 +270,7 @@ body {
 /* -- إعدادات الـ iframe العام -- */
 .learning-page .learning-content-iframe {
     width: 100%;
-    /* اجعل الـ iframe ينمو ليملأ المساحة المتاحة في الحاوية المرنة */
+    height: calc(100vh - 100px);
     flex-grow: 1;
     border-radius: 10px;
 }
