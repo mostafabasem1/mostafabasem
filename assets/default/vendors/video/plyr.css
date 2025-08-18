@@ -27,6 +27,57 @@
     }
 }
 
+
+/*
+ * ================================================
+ * Custom Plyr.io Player Logo
+ * ================================================
+ */
+
+/* 1. نجعل حاوية المشغل الرئيسية ذات تموضع نسبي (relative)
+      وهذا ضروري لتثبيت الشعار بداخلها بشكل مطلق (absolute). */
+.plyr {
+    position: relative;
+}
+
+/* 2. نستخدم العنصر الزائف ::after لإنشاء طبقة جديدة فوق المشغل ووضع الشعار فيها. */
+.plyr::after {
+    /* --- الإعدادات الأساسية --- */
+    content: ''; /* ضروري لكي يظهر العنصر الزائف */
+    position: absolute; /* لتثبيت الشعار في مكان محدد داخل المشغل */
+    pointer-events: none; /* للسماح بالضغط على الفيديو "من خلال" الشعار */
+    z-index: 20; /* لضمان ظهور الشعار فوق الفيديو */
+
+    /* --- رابط وأبعاد الشعار --- */
+    background-image: var(--logo-url);
+    background-size: contain; /* لجعل الشعار يتناسب مع الأبعاد دون تشويه */
+    background-repeat: no-repeat;
+    width: 200px;   /* عرض الشعار (عدّل حسب الحاجة) */
+    height: 50px;   /* ارتفاع الشعار (عدّل حسب الحاجة) */
+
+    /* --- موضع الشعار --- */
+    top: 15px;      /* المسافة من الحافة العلوية */
+    right: 15px;    /* المسافة من الحافة اليمنى */
+
+    /* --- تعديلات اللون والشفافية (الجديدة) --- */
+    /* أولاً، نحول الصورة إلى درجات الرمادي ثم نرفع السطوع لأقصى حد لتصبح بيضاء */
+    filter: grayscale(100%) brightness(1000%);
+
+    /* ثانياً، نجعل الشعار شفافاً بنسبة 70% (0.7) */
+    opacity: 0.7;
+}
+
+/* --- تعديلات اختيارية للشاشات الصغيرة (Mobile Responsive) --- */
+@media (max-width: 768px) {
+    .plyr::after {
+        width: 70px; /* تصغير عرض الشعار */
+        height: 25px; /* تصغير ارتفاع الشعار */
+        top: 10px;
+        right: 10px;
+    }
+}
+
+
 /* 2. الآن، أعد تفعيل النقرات بشكل انتقائي على العناصر التي نريدها أن تعمل. */
 /* أعد تفعيل النقرات على شريط التحكم السفلي بالكامل. */
 .plyr--youtube .plyr__controls {
@@ -1434,7 +1485,7 @@ a.plyr__control {
   display: block;
   width: 20px;  /* اضبط العرض حسب حجم أيقونتك */
   height: 20px; /* اضبط الارتفاع حسب حجم أيقونتك */
-  background-image: url('https://cdn.jsdelivr.net/gh/mostafabasem1/mostafabasem/assets/default/img/rewind.png'); /* <-- ضع مسار أيقونتك هنا */
+  background-image: url('/assets/default/img/rewind.png'); /* <-- ضع مسار أيقونتك هنا */
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -1451,7 +1502,7 @@ a.plyr__control {
   display: block;
   width: 20px;
   height: 20px;
-  background-image: url('https://cdn.jsdelivr.net/gh/mostafabasem1/mostafabasem/assets/default/img/fast-forward.png'); /* <-- ضع مسار أيقونتك هنا */
+  background-image: url('/assets/default/img/fast-forward.png'); /* <-- ضع مسار أيقونتك هنا */
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
