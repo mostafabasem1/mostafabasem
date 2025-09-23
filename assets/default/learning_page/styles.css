@@ -211,10 +211,9 @@ body {
 .learning-page .learning-content .learning-content-video-player {
     width: 100%;
     /* الطريقة الحديثة للحفاظ على نسبة العرض إلى الارتفاع 16:9 */
-    aspect-ratio: 16 / 9;
-    
+    /* aspect-ratio: 16 / 9; */
     position: relative;
-    background-color: #000; /* خلفية سوداء تظهر أثناء تحميل الفيديو */
+    /* background-color: #000; */ /* خلفية سوداء تظهر أثناء تحميل الفيديو */
 }
 
 /* حل بديل للمتصفحات القديمة التي لا تدعم aspect-ratio */
