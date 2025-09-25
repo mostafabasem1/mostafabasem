@@ -1798,6 +1798,7 @@ pre code {
   .table-responsive-sm {
     display: block;
     width: 100%;
+    min-height: 300px;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
   }
