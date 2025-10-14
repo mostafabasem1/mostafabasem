@@ -3,7 +3,6 @@
 $custom-control-indicator-checked-border-color: $gray-300;
 $custom-control-indicator-checked-bg: #ffffff;
 $custom-control-indicator-bg:$primary;*/
-@import 'dark-mode.css';
  @media (min-width: 991px) {
     .top-navbar {
         opacity: 0;
