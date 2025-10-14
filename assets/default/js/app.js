@@ -1,3 +1,4 @@
+import './dark-mode.js';
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
