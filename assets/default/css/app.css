@@ -6750,7 +6750,7 @@ button.bg-success:focus {
 }
 
 .bg-info {
-  background-color: #ebf7ff !important;
+  background-color: #ebf7ff ;
 }
 
 a.bg-info:hover, a.bg-info:focus,
