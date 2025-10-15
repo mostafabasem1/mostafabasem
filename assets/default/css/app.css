@@ -6800,7 +6800,7 @@ button.bg-dark:focus {
 }
 
 .bg-white {
-  background-color: #ffffff !important;
+  background-color: #ffffff ;
 }
 
 a.bg-white:hover, a.bg-white:focus,
