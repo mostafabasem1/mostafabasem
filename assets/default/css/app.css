@@ -6820,7 +6820,7 @@ button.bg-gray:focus {
 }
 
 .bg-gray300 {
-  background-color: #ececec !important;
+  background-color: #ececec ;
 }
 
 a.bg-gray300:hover, a.bg-gray300:focus,
