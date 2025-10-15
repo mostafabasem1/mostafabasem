@@ -681,7 +681,7 @@ body {
 tbody tr {
   transition: all 0.3s ease;
 }
-tbody tr:hover {
-  background-color: var(--panel-bg) !important;
-  transition: all 0.3s ease;
+.table-hover tbody tr:hover {
+  color: #A6CA2A!important;
+   background-color: #252525!important;
 }
