@@ -6850,7 +6850,7 @@ button.bg-gray100:focus {
 }
 
 .bg-white {
-  background-color: #ffffff !important;
+  background-color: #ffffff ;
 }
 
 .bg-transparent {
